@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Three.js Beams and Glow</title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: #000; /* Set background to black for better contrast */
+        }
+        canvas {
+            display: block;
+        }
+    </style>
+    <!-- Import Map for Module Resolution -->
+    <script type="importmap">
+    {
+      "imports": {
+        "three": "https://cdn.jsdelivr.net/npm/three@0.152.2/build/three.module.js",
+        "three/examples/jsm/": "https://cdn.jsdelivr.net/npm/three@0.152.2/examples/jsm/"
+      }
+    }
+    </script>
+</head>
+<body>
+    <!-- Main script, using ES6 modules -->
+    <script type="module" src="./js/script.js"></script>
+    <!-- Add this within the <body> tag of your HTML -->
+<input type="text" id="emailInput" placeholder="email address">
+
+</body>
+<style>
+    #emailInput {
+    position: absolute;
+    bottom: 20%; /* This will be adjusted dynamically with JavaScript */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 300px;
+    height: 40px;
+    background-color: black; /* Make the background transparent */
+    border: 1px solid white; /* 2px white stroke around the input box */
+    border-radius: 25px; /* Fully rounded corners */
+    box-shadow: none; /* Remove box shadow */
+    font-size: 16px;
+    text-align: center;
+    color: rgba(255, 255, 255, 0.7); /* Lighter white text color when typing */
+    opacity: 0; /* Initially hidden */
+    transition: opacity 1s ease-in-out; /* Smooth fade-in transition */
+    padding: 0 10px; /* Add some padding to prevent text from touching the borders */
+}
+
+#emailInput:focus {
+    outline: none;
+    color: white; /* Full white when typing */
+}
+
+#emailInput::placeholder {
+    color: rgba(255, 255, 255, 0.25); /* 25% white opacity for placeholder text */
+}
+
+</style>
+
+</html>
